@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  filter: contrast(1.15);
+}
+
+main {
+  min-height: 750px;
+  width: 420px;
+  background-color: rgb(206, 206, 206);
+  padding: 0.6%;
+  padding-top: 0.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.tab-content {
+  height: 650px;
+  width: 100%;
+  padding-top: 2%;
+  background-color: rgb(206, 206, 206);
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#current-time-clock {
+  height: 18rem;
+  width: 18rem;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#current-time-clock small {
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
+}
+
+#day {
+  margin-bottom: 3.3%;
+}
+
+#current-time-clock span {
+  font-size: 2.8rem;
+}
+
+#lower-section {
+  margin-top: 6%;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#lower-section > #set-alarm-heading {
+  font-size: 1.7rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 7%;
+  margin-left: 6%;
+}
+
+#lower-section #input-alarm {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 12%;
+}
+
+#lower-section #input-alarm input {
+  height: 100%;
+  width: 23.2%;
+  border: none;
+  border-radius: 5px;
+
+  background: transparent;
+  color: rgb(0, 0, 0);
+  font-size: 3em;
+  text-align: center;
+}
+
+#add-alarm {
+  height: 53px;
+  width: 84%;
+  margin: -1% auto;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(217 143 143 / 37%);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+#add-alarm #clock-symbol {
+  height: 20px;
+  position: absolute;
+  right: 2.2%;
+  filter: grayscale(1);
+}
+
+#add-alarm:hover {
+  transform: scale(1.007);
+}
+
+#add-alarm:active {
+  transform: scale(0.9);
+}
+
+#al-heading {
+  font-size: 19px;
+  margin-bottom: 3%;
+  margin-left: 2%;
+}
+
+#alarm-items-wrapper {
+  width: 100%;
+}
+
+.alarm-items {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 2.2%;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 4%;
+}
+
+.alarm-items .time-day {
+  height: 100%;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.time-day .time {
+  font-size: 32px;
+}
+
+.time-day .day {
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  margin-left: 5%;
+}
+
+.delete {
+  position: absolute;
+  right: 4%;
+  height: 15px;
+}
+
+.alarm-items:hover {
+  transform: scale(1.008);
+  background-color: rgb(152, 117, 117);
+}
+
+.nav-link {
+  width: 50%;
+  color: rgb(126, 36, 36);
+}
+
+#contact {
+  margin-top: 6%;
+  color: grey;
+}
+
+#contact > h3 {
+  font-size: 20px;
+  display: inline-block;
+  width: 80px;
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+@media screen and (max-width: 420px) {
+  main {
+    min-height: 92vh;
+    width: 100vw;
+    border-radius: 0px;
+  }
+
+  #current-time-clock {
+    height: 15.4rem;
+    width: 15.4rem;
+  }
+
+  #current-time-clock small {
+    color: rgb(216, 216, 216);
+    font-size: 0.9rem;
+  }
+
+  #day {
+    margin-bottom: 2%;
+  }
+
+  #current-time-clock span {
+    font-size: 4.5rem;
+  }
+
+  #lower-section > #set-alarm-heading {
+    font-size: 1.2rem;
+    margin-left: 8%;
+  }
+
+  #lower-section #input-alarm {
+    height: 70px;
+  }
+
+  #lower-section #input-alarm input {
+    width: 20%;
+  }
+
+  #alarm-items-wrapper {
+    height: 70vh;
+    width: 100%;
+    overflow-y: scroll;
+    border-bottom: 1px solid rgb(82, 98, 126);
+  }
+
+  .alarm-items:hover {
+    background-color: rgb(152, 117, 117);
+  }
+}
+
+.nav-tabs .nav-link:focus,
+.nav-link:focus-visible .nav-tabs .nav-link:hover {
+  border: none;
+}
+.nav-link active {
+  border: none;
+  border-radius: 0px;
+}
