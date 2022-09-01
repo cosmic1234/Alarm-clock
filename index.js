@@ -94,7 +94,7 @@ var addAlarmButton = document.getElementById('add-alarm');
 
 
 
-function createNewAlarmDOM() {
+function createNewAlarm() {
 
     if (String(userHours.value).length == 1) {
         userHours.value = '0' + '' + String(userHours.value);
@@ -186,4 +186,4 @@ function createNewAlarmDOM() {
 
 }
 
-addAlarmButton.addEventListener('click', createNewAlarmDOM);
+addAlarmButton.addEventListener('click', createNewAlarm);
